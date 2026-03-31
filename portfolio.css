@@ -1,20 +1,23 @@
 /*home page*/
 
-
+* {
+    box-sizing: border-box;
+}
 
 .index-page {
-
-    width: 100vw;
+    width: 100%;
     padding: 0px;
     margin: 0px;
     background-color: rgb(152, 124, 211);
+    min-height: 100vh;
 }
 
 .navigation {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    justify-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
     margin: 10px;
     padding: 10px;
     border: none;
@@ -25,58 +28,102 @@
 .links {
     display: flex;
     gap: 10px;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .links a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: clamp(14px, 4vw, 20px);
     color: rgb(90, 8, 97);
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: none;
     cursor: pointer;
     padding: 5px 5px;
     border-radius: 5px;
-
+    transition: background 0.3s ease;
 }
 
 .links a:hover {
     background: rgb(184, 5, 172);
-    gap: 5px;
-    box-shadow: 10cm;
-
+    box-shadow: 0 2px 8px rgba(4, 4, 130, 0.6);
 }
 
 
 .profile {
     object-fit: cover;
     border-radius: 50%;
-
+    flex-shrink: 0;
 }
-
 
 .hero-section {
     display: flex;
-    justify-content: space-between;
-    justify-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     margin: 10px;
-    padding: 10px;
-    margin-top: 125px;
-    margin-left: 75px;
-    margin-right: 75px;
+    padding: 20px;
+    margin-top: 60px;
 }
 
+.picture-container {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.picture-container img {
+    max-width: 100%;
+    height: auto;
+    width: clamp(200px, 80%, 300px);
+}
+
+.text-container {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-container h1 {
+    font-size: clamp(24px, 6vw, 48px);
+    color: rgb(38, 6, 107);
+    margin-bottom: 20px;
+}
+
+.introduction {
+    margin-bottom: 20px;
+}
+
+.descrption {
+    margin-bottom: 30px;
+    font-size: clamp(14px, 3vw, 18px);
+    color: rgb(38, 6, 107);
+}
 
 .projects_button {
     text-decoration: none;
-    font-size: 20px;
+    display: inline-block;
     background: rgb(184, 5, 172);
     color: rgb(38, 6, 107);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: none;
     cursor: pointer;
-    padding: 5px 5px;
+    padding: 10px 20px;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.projects_button a {
+    text-decoration: none;
+    color: rgb(38, 6, 107);
+    font-size: clamp(14px, 3vw, 20px);
+    font-weight: bold;
+}
+
+.projects_button:hover {
+    background: rgb(200, 20, 190);
 }
 
 
@@ -84,34 +131,37 @@
 
 .projects-page {
     font-family: 'Roboto', sans-serif;
-    margin: 5px;
-    padding: 5px;
-    background: linear-gradient(to right);
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f0f0, #ffffff);
     min-height: 100vh;
+    width: 100%;
 }
 
 .projects-brief {
     background: white;
-    padding: 40px;
-    max-height: 130px;
-    margin-bottom: 70px;
+    padding: 30px 20px;
+    max-height: none;
+    margin-bottom: 50px;
+    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
-    font-size: 1.5rem;
+    width: 90%;
+    max-width: 1000px;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     color: rgb(7, 7, 124);
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 .project-cards {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    margin: 30px;
-    margin-top: 50px;
+    padding: 20px;
+    margin: auto;
 }
 
 .HIT-timetable {
@@ -120,9 +170,16 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1;
+    min-width: 250px;
+    max-width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.HIT-timetable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 .Calculator {
     background: white;
@@ -130,9 +187,16 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1;
+    min-width: 250px;
+    max-width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.Calculator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 .third-project {
     background: white;
@@ -140,56 +204,101 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1;
+    min-width: 250px;
+    max-width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.third-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-cards img {
     max-width: 80px;
+    height: auto;
     margin-bottom: 15px;
+}
+
+.project-cards h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: rgb(7, 7, 124);
+    margin-bottom: 10px;
 }
 
 .project-cards p {
     font-size: 0.9rem;
     margin-bottom: 20px;
+    color: #666;
 }
 
-.btn a {
-    background: purple;
+.btn {
+    display: inline-block;
+    background: rgb(100, 50, 200);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: background 0.3s ease;
     text-decoration: none;
 }
 
 .btn:hover {
-    background: purple;
+    background: rgb(120, 70, 220);
+}
 
+.btn a {
+    text-decoration: none;
+    color: white;
 }
 
 .goto-github {
     justify-content: center;
-    justify-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     align-items: center;
-    margin-right: 450px;
-    margin-left: 450px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     background-color: #2d5a8b;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
 
+.goto-github h2 {
+    color: white;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin-bottom: 20px;
+}
+
+.goto-github a {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+}
+
+.goto-github a:hover {
+    background-color: #0056b3;
 }
 
 .git-links {
     align-items: center;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    margin-right: 450px;
-    margin-left: 450px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 
@@ -197,25 +306,38 @@
 
 /*about page*/
 
-
 .about-page {
     font-family: Arial, sans-serif;
-    margin: 5px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     background: white;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
 }
 
+.about-me {
+    width: 100%;
+    padding: 20px;
+}
+
+.about-me .name {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: rgb(7, 7, 124);
+    margin-bottom: 30px;
+}
 
 .about-me .description {
     display: flex;
-    padding-left: 50;
-    padding-right: 50;
-    align-content: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
 
 .name {
@@ -223,27 +345,76 @@
 }
 
 .about-me img {
-    width: 100px;
-    height: 100px;
+    width: clamp(80px, 20vw, 150px);
+    height: clamp(80px, 20vw, 150px);
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
+.about-me .description p {
+    flex: 1;
+    min-width: 250px;
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    line-height: 1.6;
+    color: #333;
+}
 
 .skills {
-    min-height: 300px;
+    min-height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 400px;
-    margin-right: 400px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 30px 20px;
     border-radius: 10px;
-    align-content: center;
-    justify-items: center;
-    margin-top: 70px;
+    text-align: center;
 }
 
+.skills h2 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: rgb(7, 7, 124);
+    margin-bottom: 30px;
+}
+
+.skill-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.skill-buttons .btn {
+    background: rgb(100, 50, 200);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: background 0.3s ease;
+}
+
+.skill-buttons .btn:hover {
+    background: rgb(120, 70, 220);
+}
 
 .resume {
     margin-top: 20px;
-    text-align: center;
+}
+
+.resume .btn {
+    background: rgb(100, 50, 200);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: background 0.3s ease;
+}
+
+.resume .btn:hover {
+    background: rgb(120, 70, 220);
 }
 
 
@@ -253,9 +424,10 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
+    width: 100%;
+    background-color: #f9f9f9;
+    min-height: 100vh;
 }
-
 
 .navigation .images img {
     border-radius: 50%;
@@ -264,7 +436,7 @@
 .navigation .links a {
     text-decoration: none;
     color: #333;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
 }
 
@@ -274,10 +446,11 @@
 
 /* Container Styles */
 .container {
-    width: 80%;
-    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -289,19 +462,21 @@
 }
 
 .contact-details h1 {
-    font-size: 2em;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #333;
 }
 
 .contact-details p {
     color: #666;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
 }
 
 /* Content Wrapper Styles */
 .content-wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 /* Illustration Styles */
@@ -310,28 +485,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
+    min-width: 200px;
+    min-height: 250px;
 }
 
 .illustration img {
     max-width: 100%;
     height: auto;
+    max-height: 300px;
 }
 
 /* Form Container Styles */
 .form-container {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
     padding: 20px;
 }
 
 .contact-info {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .info-item {
-    margin: 10px 0;
-    font-size: 1.1em;
+    margin: 15px 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: #333;
 }
 
@@ -343,6 +520,7 @@
 /* Form Section Styles */
 .form-section h2 {
     margin-bottom: 20px;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     color: #333;
 }
 
@@ -353,13 +531,275 @@
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    font-family: Arial, sans-serif;
 }
 
 .form-group textarea {
     resize: vertical;
-    height: 100px;
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-container .btn {
+    width: 100%;
+    background: rgb(100, 50, 200);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background: rgb(120, 70, 220);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets and Smaller Screens (max 768px) */
+@media (max-width: 768px) {
+    .navigation {
+        margin: 8px;
+        padding: 8px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .links a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .hero-section {
+        margin-top: 40px;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .picture-container img {
+        width: clamp(150px, 70%, 250px);
+    }
+
+    .text-container {
+        min-width: 200px;
+    }
+
+    .text-container h1 {
+        margin-bottom: 15px;
+    }
+
+    .descrption {
+        margin-bottom: 20px;
+    }
+
+    .projects-brief {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    .project-cards {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .HIT-timetable,
+    .Calculator,
+    .third-project {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .about-me .description {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills {
+        margin: 0 20px 30px;
+    }
+
+    .skill-buttons {
+        gap: 10px;
+    }
+
+    .skill-buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    .content-wrapper {
+        gap: 20px;
+    }
+
+    .illustration img {
+        max-height: 250px;
+    }
+
+    .form-container {
+        min-width: 100%;
+    }
+}
+
+/* Mobile Phones (max 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navigation {
+        margin: 5px;
+        padding: 8px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .navigation .profile img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .links {
+        gap: 5px;
+        width: 100%;
+    }
+
+    .links a {
+        padding: 6px 8px;
+        font-size: 12px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .hero-section {
+        margin-top: 20px;
+        padding: 10px;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    .picture-container img {
+        width: clamp(120px, 90%, 200px);
+    }
+
+    .projects-brief {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .projects-brief h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .HIT-timetable,
+    .Calculator,
+    .third-project {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .goto-github {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+
+    .goto-github h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .git-links {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .about-me .description {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .about-me img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skills {
+        margin: 0 10px 30px;
+        padding: 20px 15px;
+    }
+
+    .skill-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 15px 10px;
+        margin: 15px auto;
+    }
+
+    .contact-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .illustration {
+        min-height: 200px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .info-item {
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .form-container .btn {
+        padding: 10px;
+    }
 }
