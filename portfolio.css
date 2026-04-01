@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
+
 .index-page {
+    background: linear-gradient(to right, rgb(18, 145, 136), rgb(12, 100, 163));
     width: 100%;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(152, 124, 211);
     min-height: 100vh;
 }
 
@@ -97,7 +98,7 @@
     margin-bottom: 20px;
 }
 
-.descrption {
+.description {
     margin-bottom: 30px;
     font-size: clamp(14px, 3vw, 18px);
     color: rgb(38, 6, 107);
@@ -130,10 +131,10 @@
 /*projects page*/
 
 .projects-page {
+    background: linear-gradient(to right, rgb(18, 145, 136), rgb(12, 100, 163));
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #f0f0f0, #ffffff);
     min-height: 100vh;
     width: 100%;
 }
@@ -307,10 +308,10 @@
 /*about page*/
 
 .about-page {
+    background: linear-gradient(to right, rgb(18, 145, 136), rgb(12, 100, 163));
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: white;
     min-height: 100vh;
     width: 100%;
 }
@@ -421,11 +422,11 @@
 /*contact details page*/
 
 .contact-page {
+    background: linear-gradient(to right, rgb(18, 145, 136), rgb(12, 100, 163));
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f9f9f9;
     min-height: 100vh;
 }
 
@@ -445,7 +446,8 @@
 }
 
 /* Container Styles */
-.container {
+.container-form {
+    background: linear-gradient(to right, rgb(167, 223, 219), rgb(191, 130, 203));
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
@@ -566,7 +568,6 @@
     background: rgb(120, 70, 220);
 }
 
-/* Media Queries for Responsive Design */
 
 /* Tablets and Smaller Screens (max 768px) */
 @media (max-width: 768px) {
